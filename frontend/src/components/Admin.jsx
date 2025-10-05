@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://knowledgescout-1-ta2t.onrender.com';
 
 function Admin({ token }) {
   const [stats, setStats] = useState(null);
@@ -94,7 +94,7 @@ function Admin({ token }) {
 
   return (
     <div className="admin-container">
-      <h1>⚙️ Admin Panel</h1>
+      <h1>Admin Panel</h1>
 
       {message && (
         <div className={`message ${message.type}`}>
@@ -105,7 +105,7 @@ function Admin({ token }) {
 
       <div className="admin-grid">
         <div className="admin-card">
-          <h2>📊 Index Statistics</h2>
+          <h2>Index Statistics</h2>
           {stats ? (
             <div className="stats-grid">
               <div className="stat-item">
@@ -140,7 +140,7 @@ function Admin({ token }) {
         </div>
 
         <div className="admin-card">
-          <h2>📤 Upload Document</h2>
+          <h2>Upload Document</h2>
           <form onSubmit={handleUpload} className="upload-form">
             <div className="form-group">
               <label htmlFor="file-input">Select File:</label>

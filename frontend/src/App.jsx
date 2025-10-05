@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import './App.css';
@@ -43,29 +42,29 @@ function App() {
             </Link>
             <ul className="nav-menu">
               <li className="nav-item">
-                <Link to="/docs" className="nav-link">Documents</Link>
+                <Link to="/docs" className="nav-link">📄 Documents</Link>
               </li>
               <li className="nav-item">
-                <Link to="/ask" className="nav-link">Ask Question</Link>
+                <Link to="/ask" className="nav-link">🤔 Ask Question</Link>
               </li>
               {token && (
                 <li className="nav-item">
-                  <Link to="/admin" className="nav-link">Admin</Link>
+                  <Link to="/admin" className="nav-link">⚙️ Admin</Link>
                 </li>
               )}
               {!token ? (
                 <>
                   <li className="nav-item">
-                    <Link to="/login" className="nav-link">Login</Link>
+                    <Link to="/login" className="nav-link">🔐 Login</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/register" className="nav-link">Register</Link>
+                    <Link to="/register" className="nav-link">👤 Register</Link>
                   </li>
                 </>
               ) : (
                 <li className="nav-item">
                   <button onClick={handleLogout} className="nav-link logout-btn">
-                    Logout ({user?.username})
+                    🚪 Logout ({user?.username})
                   </button>
                 </li>
               )}
@@ -98,22 +97,26 @@ function Home() {
         <h1>Welcome to KnowledgeScout</h1>
         <p>Your intelligent document Q&A system</p>
         <div className="hero-buttons">
-          <Link to="/docs" className="btn btn-primary">Browse Documents</Link>
-          <Link to="/ask" className="btn btn-secondary">Ask a Question</Link>
+          <Link to="/docs" className="btn btn-primary">📄 Browse Documents</Link>
+          <Link to="/ask" className="btn btn-secondary">🤔 Ask a Question</Link>
         </div>
       </div>
       <div className="features">
         <div className="feature-card">
           <h3>📄 Upload Documents</h3>
-          <p>Upload and manage your documents with ease</p>
+          <p>Upload and manage your documents with ease. Supports multiple file formats.</p>
         </div>
         <div className="feature-card">
           <h3>🔍 Smart Search</h3>
-          <p>Find relevant information across all documents</p>
+          <p>Find relevant information across all documents using AI-powered search.</p>
         </div>
         <div className="feature-card">
           <h3>🔒 Privacy Control</h3>
-          <p>Keep documents private or share via token</p>
+          <p>Keep documents private or share them via secure tokens.</p>
+        </div>
+        <div className="feature-card">
+          <h3>⚡ Fast Results</h3>
+          <p>Get instant answers with intelligent caching and optimized search.</p>
         </div>
       </div>
     </div>
